@@ -23,7 +23,6 @@ locals {
     terraform = "true"
     app       = "gke-standard"
     purpose   = "demo"
-    env       = "sandbox"
-    repo      = "terraform_gcp"
+    repo      = "gcp-gke-standard"
   }
 }

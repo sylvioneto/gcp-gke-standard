@@ -8,7 +8,7 @@ prometheus:
     enabled: true
     ingressClassName: nginx
     hosts:
-    - prometheus.your-domain.com
+    - prometheus.yourdomain.com
 
 alertmanager:
   enabled: true
@@ -16,7 +16,7 @@ alertmanager:
     enabled: true
     ingressClassName: nginx
     hosts:
-    - alertmanager.your-domain.com
+    - alertmanager.yourdomain.com
 
 grafana:
   enabled: true
@@ -24,4 +24,4 @@ grafana:
     enabled: true
     ingressClassName: nginx
     hosts:
-    - grafana.your-domain.com
+    - grafana.yourdomain.com
