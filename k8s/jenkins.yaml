@@ -1,0 +1,27 @@
+# Ref https://github.com/jenkinsci/helm-charts/
+controller:
+  # Consider using a custom jenkins image with the plugins already installed
+  # Ref https://github.com/jenkinsci/helm-charts/tree/main/charts/jenkins#consider-using-a-custom-image
+  image: jenkins/jenkins
+  tag: "2.319.1"
+  JCasC:
+    configScripts:
+      welcome-message: |
+        jenkins:
+          systemMessage: Welcome to Jenkins running on GKE!
+  ingress:
+    enabled: true
+    paths: []
+    ingressClassName: nginx
+    hostName: jenkins.your-domain.com
+
+persistence:
+  enabled: true
+  storageClass: premium-rwo
+  size: "500Gi"
+
+agent:
+  resources:
+    requests:
+      cpu: "512m"
+      memory: "512Mi"
